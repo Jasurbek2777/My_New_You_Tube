@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mynewyoutube.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_homeInnerFragment"
+            app:destination="@id/homeInnerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.mynewyoutube.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeInnerFragment"
+        android:name="com.example.mynewyoutube.fragments.HomeInnerFragment"
+        android:label="fragment_home_inner"
+        tools:layout="@layout/fragment_home_inner" />
+    <fragment
+        android:id="@+id/playFragmentFragment"
+        android:name="com.example.mynewyoutube.fragments.PlayFragmentFragment"
+        android:label="fragment_play_fragment"
+        tools:layout="@layout/fragment_play_fragment" />
+    <activity
+        android:id="@+id/demoActivity"
+        android:name="com.example.mynewyoutube.activities.DemoActivity"
+        android:label="activity_demo"
+        tools:layout="@layout/activity_demo" />
+    <activity
+        android:id="@+id/youTubeFailureActivity"
+        android:name="com.example.mynewyoutube.activities.YouTubeFailureActivity"
+        android:label="activity_you_tube_failure"
+        tools:layout="@layout/activity_you_tube_failure" />
+    <fragment
+        android:id="@+id/signFragment"
+        android:name="com.example.mynewyoutube.fragments.SignFragment"
+        android:label="fragment_sign"
+        tools:layout="@layout/fragment_sign" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.mynewyoutube.fragments.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/navigationFragment"
+        android:name="com.example.mynewyoutube.fragments.NavigationFragment"
+        android:label="fragment_navigation"
+        tools:layout="@layout/fragment_navigation" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.mynewyoutube.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+</navigation>
